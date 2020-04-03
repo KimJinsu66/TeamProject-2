@@ -8,23 +8,28 @@ import java.util.*;
  */
 public class Speed
 {    
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int speed = sc.nextInt();
-        //System.out.println(speed);// just check 
-        String trafficRoute = sc.next();
-    }    
-
-    public double RobotWalk(int speed, String trafficLight){       
-        double result = 0; 
+    int RobotWalk(int speed, String trafficLight){       
+        int result = 0; //question
         
-        if (trafficLight == "green"){
+        if (trafficLight.equals("green")){
             result = speed;
-        }else if (trafficLight == "yellow"){
-            result = speed * 1.2;                      
-        }else if(trafficLight == "red"){
+        }else if (trafficLight.equals("yellow")){
+            result = (int)(speed * 1.2);
+            System.out.println("sucess");
+        }else if(trafficLight.equals("red")){
             result = speed * speed/1; 
         }
         return result;
     }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int speed = sc.nextInt();
+        //System.out.println(speed);// just check 
+        String trafficLight = sc.next();
+        Speed sp = new Speed();
+        System.out.println(sp.RobotWalk(speed,trafficLight));
+    }    
+
+    
 }
