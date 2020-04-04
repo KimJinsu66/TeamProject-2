@@ -8,27 +8,38 @@ import java.util.*;
  */
 public class Speed
 {    
-    int RobotWalk(int speed, String trafficLight){       
-        int result = 0; //question
+    int RobotWalk(int speed, ArrayList<String> trafficLight){       
         
-        if (trafficLight.equals("green")){
-            result = speed;
-        }else if (trafficLight.equals("yellow")){
-            result = (int)(speed * 1.2);
-            System.out.println("sucess");
-        }else if(trafficLight.equals("red")){
-            result = speed * speed/1; 
-        }
-        return result;
+        for (String trafficlight : trafficLight){ 
+            System.out.println(trafficlight);
+            if(trafficlight.equals("red")){
+                System.out.println("s");
+                speed = 0 ;
+                break;
+            }
+            else if (trafficlight.equals("yellow"))speed = (int)(speed * 1.2);
+            else if (trafficlight.equals("green"))continue;
+            
     }
+    return speed;
+}
     
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int speed = sc.nextInt();
         //System.out.println(speed);// just check 
-        String trafficLight = sc.next();
+        ArrayList<String> traffic_array = new ArrayList<String>();
+        String trafficlight = "";
         Speed sp = new Speed();
-        System.out.println(sp.RobotWalk(speed,trafficLight));
+        
+        while(!trafficlight.equals("0")){
+            trafficlight = sc.next();
+            traffic_array.add(trafficlight);
+            
+        }
+        
+        System.out.println(sp.RobotWalk(speed,traffic_array));
     }    
 
     
