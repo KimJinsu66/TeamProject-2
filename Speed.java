@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 /**
- * included RobotWalk method in 
+ * RobotWalk 를 포함한 Speed class
  * 
  * @author (2014671038 Kim Jinsu, 2018315053 Teraoka Yuika) 
  * @version (2020.04.05)
