@@ -8,9 +8,8 @@ import java.util.*;
  */
 public class Speed1
 {    
-    
+
     int RobotWalk(int speed,Scanner sc){       
-        
         String trafficLight = "";
         do{
             trafficLight = sc.next();
@@ -19,15 +18,8 @@ public class Speed1
             else if (trafficLight.equals("red"))speed = 0;
         }
         while(speed != 0);
-            
-        
-        
-        
-        
-    return speed;
-}
-    
-
+        return speed;
+    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int speed = sc.nextInt();
@@ -35,11 +27,6 @@ public class Speed1
         ArrayList<String> traffic_array = new ArrayList<String>();
         String trafficlight = "";
         Speed1 sp = new Speed1();
-        
-        
-        
         System.out.println(sp.RobotWalk(speed,sc));
     }    
-
-    
 }
