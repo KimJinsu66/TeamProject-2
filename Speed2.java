@@ -8,14 +8,16 @@ import java.util.*;
  */
 public class Speed2
 {    
-    int RobotWalk(int speed,String trafficLight){       
+    static int RobotWalk(int speed,String trafficLight){       
         
-        if (trafficLight.equals("green"))
+              if (trafficLight.equals("green"))
               System.out.println(speed);
         else if (trafficLight.equals("yellow"))
               speed = (int)(speed * 1.2);
         else if (trafficLight.equals("red"))
               speed = 0;
+              
+        
 
         return speed;
     } 
@@ -24,9 +26,11 @@ public class Speed2
         Scanner sc = new Scanner(System.in);
         int speed = sc.nextInt();
         Speed2 sp = new Speed2();
-        //while(!sc.next().equals("stop")){
+        
+        while(!sc.next().equals("stop")){
             String trafficLight = sc.next();
             System.out.println(sp.RobotWalk(speed,trafficLight));
-        //}
+        }
+        
     }    
 }
