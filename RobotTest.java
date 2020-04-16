@@ -9,7 +9,7 @@ public class RobotTest
 {
     public static void main(String[] args){
         double speed = 10.0;
-        String trafficLight = "green";
+        String trafficLight = "yellow";
         Robot robot = new Robot();
 
         System.out.println(robot.RobotWalk(speed,trafficLight));

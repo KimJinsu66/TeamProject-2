@@ -11,8 +11,7 @@ public class Robot
         if (trafficLight.equals("green"));
         else if (trafficLight.equals("yellow"))
             speed = speed * 1.2;
-        else speed = 0;
+        else speed = 0.0;
         return speed;
     } 
-
 }
