@@ -44,10 +44,19 @@ public class RobotTest
     public void RobotWalk_Test()
     {
         Robot robot1 = new Robot();
+        assertEquals(10.0, robot1.getSpeed(), 0.1);
         robot1.RobotWalk(10.0, "yellow");
-        assertEquals(12.0, robot1.getSpeed(), 0.1);
         robot1.RobotWalk(10.0, "red");
+    }
+
+    @Test
+    public void RobotWalk_Test2()
+    {
+        Robot robot1 = new Robot();
         assertEquals(0.0, robot1.getSpeed(), 0.1);
+        robot1.RobotWalk(10.0, "yellow");
+        robot1.RobotWalk(10.0, "red");
     }
 }
+
 
