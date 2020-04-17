@@ -7,11 +7,18 @@ import java.util.Scanner;
  */
 public class Robot
 {    
-    public double RobotWalk(double speed,String trafficLight){               
+    private double speed;
+    
+    public double getSpeed(){
+        return this.speed;
+    }
+    
+    
+    public void RobotWalk(double speed,String trafficLight){               
         if (trafficLight.equals("green"));
         else if (trafficLight.equals("yellow"))
-            speed = speed * 1.2;
-        else speed = 0.0;
-        return speed;
+            this.speed = speed * 1.2;
+        else this.speed = 0.0;
+        
     } 
 }
