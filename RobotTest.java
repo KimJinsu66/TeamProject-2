@@ -4,12 +4,11 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 /**
  * The test class RobotTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  (2014671038 Kim Jinsu, 2018315053 Teraoka Yuika)
+ * @version (2020.04.19)
  */
 public class RobotTest
 {
@@ -19,7 +18,6 @@ public class RobotTest
     public RobotTest()
     {
     }
-
     /**
      * Sets up the test fixture.
      *
@@ -29,7 +27,6 @@ public class RobotTest
     public void setUp()
     {
     }
-
     /**
      * Tears down the test fixture.
      *
@@ -39,9 +36,9 @@ public class RobotTest
     public void tearDown()
     {
     }
-
+    
     @Test
-    public void RobotWalk_Test()
+    public void RobotWalk_Test1()
     {
         Robot robot1 = new Robot();
         assertEquals(10.0, robot1.getSpeed(), 0.1);
