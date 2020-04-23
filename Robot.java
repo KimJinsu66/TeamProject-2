@@ -3,7 +3,7 @@ import java.util.Scanner;
  * RobotWalk 메소드를 포함한 Robot class
  * 
  * @author (2014671038 Kim Jinsu, 2018315053 Teraoka Yuika) 
- * @version (2020.04.19)
+ * @version (2020.04.23)
  */
 public class Robot
 {    
@@ -14,7 +14,8 @@ public class Robot
     public void RobotWalk(double speed,String trafficLight){               
         if (trafficLight.equals("green"));
         else if (trafficLight.equals("yellow"))
-            this.speed = speed * 1.2;
-        else this.speed = 0.0;       
+            speed = speed * 1.2;
+        else speed = 0.0;
+        this.speed = speed;
     } 
 }
